@@ -32,6 +32,12 @@ namespace MarkdownWin
             _fileWatcher.Changed += new FileSystemEventHandler(OnWatchedFileChanged);
 
             this.Disposed += new EventHandler(Watcher_Disposed);
+
+            if (Program.Arguments != null)
+            {
+                WatchFile(Program.Arguments[0]);
+            }
+
             browser.AllowWebBrowserDrop = false;
         }
 
