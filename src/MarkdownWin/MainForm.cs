@@ -33,7 +33,7 @@ namespace MarkdownWin
 
             this.Disposed += new EventHandler(Watcher_Disposed);
 
-            if (Program.Arguments != null)
+            if (Program.Arguments.Length > 0)
             {
                 WatchFile(Program.Arguments[0]);
             }
